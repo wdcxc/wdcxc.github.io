@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[wdcxc's blog]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="wdcxc.github.io/"/>
+  <updated>2015-11-05T01:56:09.000Z</updated>
+  <id>wdcxc.github.io/</id>
+  
+  <author>
+    <name><![CDATA[wdcxc]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Sublime Text 使用总结]]></title>
+    <link href="wdcxc.github.io/2015/11/04/Sublime%20Text%20%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"/>
+    <id>wdcxc.github.io/2015/11/04/Sublime Text 使用总结/</id>
+    <published>2015-11-04T00:00:00.000Z</published>
+    <updated>2015-11-05T01:56:09.000Z</updated>
+    <content type="html"><![CDATA[<p>[toc]</p>
+<hr>
+<h2 id="1-常用快捷键">1.常用快捷键</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alt + Shift + 1~9 (非小键盘)</td>
+<td>屏幕显示相等数字的小窗口</td>
+</tr>
+<tr>
+<td>Ctrl + d</td>
+<td>自动选取当前单词</td>
+</tr>
+<tr>
+<td>Ctrl + l</td>
+<td>选取当前行</td>
+</tr>
+<tr>
+<td>Ctrl + n</td>
+<td>新建文件</td>
+</tr>
+<tr>
+<td>Ctrl + p</td>
+<td>定位</td>
+</tr>
+<tr>
+<td>Ctrl + Shift+p</td>
+<td>打开快捷键帮助面板</td>
+</tr>
+<tr>
+<td>Ctrl + `</td>
+<td>打开命令行</td>
+</tr>
+<tr>
+<td>Ctrl + {</td>
+<td>左缩进</td>
+</tr>
+<tr>
+<td>Ctrl + }</td>
+<td>右缩进</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-常用插件">2.常用插件</h2><table>
+<thead>
+<tr>
+<th>插件名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Package Control</td>
+<td>插件管理</td>
+</tr>
+<tr>
+<td>AdvancedNewFile</td>
+<td>文件管理</td>
+</tr>
+<tr>
+<td>MarkdownEditing</td>
+<td>支持Markdown编辑</td>
+</tr>
+<tr>
+<td>Table Editor</td>
+<td>表格编写自动格式化</td>
+</tr>
+<tr>
+<td>DocBlockr</td>
+<td>注释格式自动化</td>
+</tr>
+<tr>
+<td>BracketHighlighter</td>
+<td>括弧高亮插件，清晰明了</td>
+</tr>
+<tr>
+<td>Emmet</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-Build_Systems">3.Build Systems</h2><ul>
+<li><a href="http://sublimetext.info/docs/en/reference/build_systems.html" target="_blank" rel="external">reference</a></li>
+</ul>
+<hr>
+<h2 id="4-资源">4.资源</h2><h3 id="4-1_Sublime_Text_3_下载">4.1 <a href="http://www.sublimetext.com/3" target="_blank" rel="external">Sublime Text 3 下载</a></h3><h3 id="4-2_帮助文档">4.2 <a href="http://sublimetext.info/" target="_blank" rel="external">帮助文档</a></h3>]]></content>
+    <summary type="html">
+    <![CDATA[<p>[toc]</p>
+<hr>
+<h2 id="1-常用快捷键">1.常用快捷键</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alt + Shift + 1]]>
+    </summary>
+    
+      <category term="Tools" scheme="wdcxc.github.io/tags/Tools/"/>
+    
+      <category term="sublime" scheme="wdcxc.github.io/tags/sublime/"/>
+    
+      <category term="Tools" scheme="wdcxc.github.io/categories/Tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Docker使用总结]]></title>
+    <link href="wdcxc.github.io/2015/10/26/Docker%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"/>
+    <id>wdcxc.github.io/2015/10/26/Docker使用总结/</id>
+    <published>2015-10-26T00:00:00.000Z</published>
+    <updated>2015-11-05T01:56:09.000Z</updated>
+    <content type="html"><![CDATA[<p>[toc]</p>
+<hr>
+<h2 id="1-安装(基于ubuntu)">1.<a href="http://docs.docker.com/linux/step_one/" target="_blank" rel="external">安装(基于ubuntu)</a></h2><p><strong>1.安装wget</strong></p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> install wget</span><br></pre></td></tr></table></figure>
+<p><strong>2.安装Docker软件包</strong></p>
+<ul>
+<li>从Docker官网下载</li>
+</ul>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- http<span class="variable">s:</span>//<span class="built_in">get</span>.docker.<span class="keyword">com</span>/ | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>从DaoCloud下载</li>
+</ul>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL http<span class="variable">s:</span>//<span class="built_in">get</span>.daocloud.io/docker | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="2-使用Docker_Hub_Mirror">2.使用Docker Hub Mirror</h2><p><strong>简介</strong></p>
+<blockquote>
+<p>Mirror 是 Docker Registry 的一种特殊类型，它起到了类似代理服务器的缓存角色，在用户和 Docker Hub 之间做镜像的缓存。这个功能的设计目的是为了企业客户访问 Docker Hub 时降低网络开销。</p>
+</blockquote>
+<p><strong>使用DaoCloud加速器2.0</strong></p>
+<ul>
+<li><p><a href="https://account.daocloud.io/signup?invite_code=pfkx67jvijuf16g9akki" target="_blank" rel="external">免费注册</a></p>
+</li>
+<li><p>安装加速器</p>
+</li>
+</ul>
+<p>运行安装命令（Docker ToolBox下可以使用 docker-machine ssh default 进入终端，boot2docker 可以使用 boot2docker ssh）</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL http<span class="variable">s:</span>//<span class="built_in">get</span>.daocloud.io/daomonit/install.<span class="keyword">sh</span> | <span class="keyword">sh</span> -<span class="keyword">s</span> <span class="number">89740</span>b95f9100e3fd8d7ca5c9634166d87dfdf20</span><br></pre></td></tr></table></figure>
+<ul>
+<li>卸载加速器</li>
+</ul>
+<p>可以通过运行 <code>dpkg -r daomonit</code> 卸载主机监控程序。( Centos 通过  <code>rpm -e daomonit</code> 卸载，Docker ToobBox 通过 <code>docker rm -f daomonit</code> 卸载)</p>
+<hr>
+<h2 id="3-常用命令">3.<a href="https://docs.docker.com/reference/commandline/cli/" target="_blank" rel="external">常用命令</a></h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>attach</strong> &lt; container &gt;</td>
+<td>与运行中的容器<strong>交互</strong></td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>build</strong> [ options ] &lt; new image name &gt; &lt; Dockerfile position &gt;</td>
+<td><strong>构建</strong>镜像</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>commit</strong> &lt; current job &gt; &lt; new image name &gt;</td>
+<td>将<strong>容器状态保存</strong>为镜像</td>
+</tr>
+<tr>
+<td>docker <strong>cp</strong> &lt; container:path &gt; &lt; hostpath &gt;</td>
+<td>从容器内<strong>复制文件</strong>到指定的路径</td>
+</tr>
+<tr>
+<td>docker create <br> [ options ] &lt; image &gt;</td>
+<td>在指定镜像上创建一个<strong>读写层</strong></td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>diff</strong> &lt; container &gt;</td>
+<td>查看容器内发生<strong>变化</strong>的文件和目录</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>export</strong> &lt; image &gt;</td>
+<td>用于将容器的系统文件<strong>打包</strong>成tar文件</td>
+</tr>
+<tr>
+<td>docker <strong>events</strong></td>
+<td>打印指定时间内的容器的<strong>实时系统事件</strong></td>
+</tr>
+<tr>
+<td><strong>H</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>help</strong> &lt; cmd &gt;</td>
+<td>查看和指定命令相关的<strong>帮助</strong></td>
+</tr>
+<tr>
+<td>docker <strong>history</strong> &lt; image name &gt;</td>
+<td>查看镜像的<strong>历史</strong></td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>images</strong></td>
+<td><strong>显示</strong>当前本地所有镜像</td>
+</tr>
+<tr>
+<td>docker <strong>import</strong> &lt; path &gt;</td>
+<td><strong>导入</strong>远程文件、本地文件和目录</td>
+</tr>
+<tr>
+<td>docker <strong>info</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>inspect</strong> &lt; container/image &gt;</td>
+<td>收集有关容器和镜像的<strong>底层信息</strong>，包括容器实例的IP地址，端口绑定列表，特定端口映射的搜索，收集配置的详细信息</td>
+</tr>
+<tr>
+<td><strong>K</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>kill</strong> [ options ] &lt; container &gt;</td>
+<td>发送SIGKILL信号来<strong>停止容器的主进程</strong></td>
+</tr>
+<tr>
+<td><strong>L</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>load</strong> &lt; *.tar &gt;</td>
+<td>从tar文件中<strong>载入镜像</strong>或仓库到STDIN</td>
+</tr>
+<tr>
+<td>docker <strong>login</strong> [ options ] &lt; server &gt;</td>
+<td><strong>登录</strong>到Docker registry服务器</td>
+</tr>
+<tr>
+<td>docker <strong>logs</strong> &lt; imgae name &gt;</td>
+<td>查看指定镜像的<strong>日志</strong></td>
+</tr>
+<tr>
+<td><strong>P</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>pull</strong> &lt; docker hub namespace/image name &gt;</td>
+<td><strong>拉取</strong>指定镜像</td>
+</tr>
+<tr>
+<td>docker <strong>ps</strong></td>
+<td>查看当前<strong>正在运行</strong>的容器</td>
+</tr>
+<tr>
+<td>docker <strong>push</strong> &lt; image name &gt;</td>
+<td><strong>推送</strong>指定镜像</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>restart</strong> &lt; container name or container id &gt;</td>
+<td><strong>重启</strong>指定容器</td>
+</tr>
+<tr>
+<td>docker <strong>rm</strong> &lt; container name or container id &gt;</td>
+<td><strong>删除</strong>指定容器</td>
+</tr>
+<tr>
+<td>docker <strong>rmi</strong> [ -f ] &lt; image name or image id &gt;</td>
+<td><strong>删除</strong>指定镜像</td>
+</tr>
+<tr>
+<td>docker <strong>run</strong> &lt; image name &gt;</td>
+<td><strong>运行</strong>指定镜像</td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>save</strong> &lt; image &gt;</td>
+<td><strong>保存镜像</strong>到tar文件中,并发送到STDOUT</td>
+</tr>
+<tr>
+<td>docker <strong>search</strong> &lt; image name or repository name &gt;</td>
+<td><strong>搜索</strong>镜像</td>
+</tr>
+<tr>
+<td>docker <strong>start</strong> &lt; container name or container id &gt;</td>
+<td><strong>启动</strong>指定容器</td>
+</tr>
+<tr>
+<td>docker <strong>stop</strong> &lt; container name or container id &gt;</td>
+<td><strong>停止</strong>指定容器</td>
+</tr>
+<tr>
+<td><strong>T</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>tag</strong> &lt; image id &gt; &lt; docker hub namespace/image name:version label or tag &gt;</td>
+<td>设置镜像<strong>标签</strong></td>
+</tr>
+<tr>
+<td><strong>W</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>wait</strong> &lt; image &gt;</td>
+<td><strong>阻塞</strong>对指定容器的其它调用方法，直到容器停止后退出阻塞</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-Docker镜像构建">4.Docker镜像构建</h2><h3 id="4-1_Dockerfile语法">4.1 <a href="https://docs.docker.com/reference/builder/" target="_blank" rel="external">Dockerfile语法</a></h3><table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>使用场景</th>
+<th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ADD</strong> <br> &lt; src &gt; &lt; des &gt;</td>
+<td><strong>复制文件</strong>指令。它有两个参数<source>和<destination>。destination是容器内的路径。source可以是URL或者是启动配置上下文中的一个文件</destination></td>
+<td>官方推荐用 COPY ，源文件可以是 url 或 tar 包，当源文件为 tar 包时会自动 untar</td>
+</tr>
+<tr>
+<td><strong>COPY</strong> <br> &lt; src &gt; &lt; des &gt;</td>
+<td><strong>复制文件</strong>到容器中</td>
+<td>官方推荐</td>
+</tr>
+<tr>
+<td><strong>CMD</strong> <br> [ “exec”,”p1”,”p2” ]  <strong>CMD</strong> [ “p1”,”p2” ]  <strong>CMD</strong> cmd p1 p2</td>
+<td>容器运行时默认调用的<strong>启动命令</strong>，提供了容器默认的执行命令</td>
+<td>Dockerfile只允许使用一次CMD指令，使用多个CMD会抵消之前所有的指令，只有最后一个指令生效</td>
+</tr>
+<tr>
+<td><strong>EXPOSE</strong> <br> &lt; hostport:contport &gt;</td>
+<td>指定容器在运行时监听的<strong>端口</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>ENTRYPOINT</strong>  [“exec”,”p1”,”p2”]  <strong>ENTRYPOINT</strong> <br> cmd p1 p2</td>
+<td>配置给容器一个可执行的命令，这意味着在每次使用镜像创建容器时一个特定的应用程序可以被设置为<strong>默认程序</strong>。同时也意味着该镜像每次被调用时仅能运行指定的应用。</td>
+<td>类似于CMD，Docker只允许一个ENTRYPOINT，多个ENTRYPOINT会抵消之前所有的指令，只执行最后的ENTRYPOINT指令</td>
+</tr>
+<tr>
+<td><strong>ENV</strong> <br> &lt; key &gt; &lt; value &gt;</td>
+<td>设置<strong>环境变量</strong>。它们使用键值对，增加运行程序的灵活性</td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>FROM</strong> &lt; image &gt;</td>
+<td>指定最底层<strong>镜像</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>MAINTAINER</strong> <br> &lt; author name &gt;</td>
+<td>说明镜像<strong>作者</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>RUN</strong> &lt; cmd &gt;</td>
+<td>在shell或者exec的环境下执行的<strong>命令</strong></td>
+<td>RUN指令会在新创建的镜像上添加新的层面，接下来提交的结果用在Dockerfile的下一条指令中</td>
+</tr>
+<tr>
+<td><strong>USER</strong> &lt; uid &gt;</td>
+<td>指定容器运行时<strong>身份</strong>，镜像正在运行时设置一个 UID</td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>VOLUME</strong> &lt; path &gt;</td>
+<td>授权访问从容器内到主机上的目录，即为容器指定<strong>挂载数据卷</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>WORKDIR</strong> <br> &lt; dirpath &gt;</td>
+<td>指定 RUN、CMD 与 ENTRYPOINT 命令的<strong>工作目录</strong></td>
+<td>*</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-2_示例">4.2 示例</h3><ul>
+<li>wdcxc/hexo:base</li>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Hexo Docker Image </span></span><br><span class="line"><span class="comment">#image:wdcxc/hexo</span></span><br><span class="line"><span class="built_in">FROM</span> debian:stable</span><br><span class="line"><span class="built_in">MAINTAINER</span> wdcxc&lt;<span class="number">904342189</span>@qq.com&gt;</span><br><span class="line"><span class="comment">#install</span></span><br><span class="line"><span class="built_in">RUN</span> <span class="bash">apt-get update &amp;&amp; apt-get install -y curl</span><br><span class="line"></span><span class="built_in">RUN</span> <span class="bash">curl <span class="operator">-s</span>L https://deb.nodesource.com/setup | bash </span><br><span class="line"></span><span class="built_in">RUN</span> <span class="bash">apt-get update &amp;&amp; apt-get install -y nodejs &amp;&amp; npm install -g hexo</span><br><span class="line"></span><span class="comment">#configure</span></span><br><span class="line"><span class="built_in">RUN</span> <span class="bash">mkdir -p /usr/<span class="built_in">local</span>/hexo &amp;&amp; <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/hexo &amp;&amp; hexo init &amp;&amp; npm install</span><br><span class="line"></span><span class="comment">#run</span></span><br><span class="line"><span class="built_in">EXPOSE</span> <span class="number">4000</span>:<span class="number">4000</span></span><br><span class="line">WORKDIR /usr/local/hexo/</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="5-注意点">5.注意点</h2><ul>
+<li><p>Docker只支持64位平台 </p>
+</li>
+<li><p>程序运行完成之后，容器不会被销毁，但是状态为 Exited。此外对于以交互模式启动的容器可以先按下 Ctrl+P 然后按下 Ctrl+Q 这样的按键顺序脱离（detach）一个容器，脱离后的容器状态仍为 Up 并且程序会继续在后台运行，这时可以使用 attach 命令重新附到一个已经脱离的程序</p>
+</li>
+<li><p>如果要删除所有容器 docker rm $(docker ps -q -a)</p>
+</li>
+<li><p>要注意的一点：容器被删除后里面的数据会被删除，因此要注意挂载数据卷使数据持久化</p>
+</li>
+<li><p>不要在构建中升级版本<br>更新将发生在基础镜像里，你不需要在你的容器内来apt-get upgrade更新。因为在隔离情况下，如果更新时试图修改 init 或改变容器内的设备，更新可能会经常失败。它还可能会产生不一致的镜像，因为你不再有你的应用程序该如何运行以及包含在镜像中依赖的哪种版本的正确源文件。</p>
+</li>
+<li><p>构建镜像时文件名必须为Dockerfile，构建相关文件最好都放在同一目录下</p>
+</li>
+</ul>
+<hr>
+<h2 id="6-参考资料">6.参考资料</h2><ul>
+<li><p><a href="https://docs.docker.com/mac/started/" target="_blank" rel="external">Docker Get Started</a></p>
+</li>
+<li><p><a href="http://help.daocloud.io/index.html" target="_blank" rel="external">关于DaoCloud</a></p>
+</li>
+<li><p><a href="http://help.daocloud.io/tutorials/index.html" target="_blank" rel="external">Docker 新手入门 30 min</a></p>
+</li>
+<li><p><a href="http://www.docker.com/" target="_blank" rel="external">Docker官网</a></p>
+</li>
+<li><p><a href="https://docs.docker.com/" target="_blank" rel="external">Docker Docs</a></p>
+</li>
+<li><p><a href="https://docs.docker.com/extend/plugins_volume/" target="_blank" rel="external">Write a volume plugin</a></p>
+</li>
+<li><p><a href="https://docs.docker.com/reference/builder/" target="_blank" rel="external">Dockerfile reference</a></p>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>[toc]</p>
+<hr>
+<h2 id="1-安装(基于ubuntu)">1.<a href="http://docs.docker.com/linux/step_one/" target="_blank" rel="external">安装(基于ubuntu)</a>]]>
+    </summary>
+    
+      <category term="Docker" scheme="wdcxc.github.io/tags/Docker/"/>
+    
+      <category term="Docker" scheme="wdcxc.github.io/categories/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo使用总结]]></title>
+    <link href="wdcxc.github.io/2015/10/24/Hexo%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"/>
+    <id>wdcxc.github.io/2015/10/24/Hexo使用总结/</id>
+    <published>2015-10-24T00:00:00.000Z</published>
+    <updated>2015-11-05T01:56:09.000Z</updated>
+    <content type="html"><![CDATA[<p>[toc]</p>
+<hr>
+<h2 id="1-简介">1.简介</h2><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a>是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<hr>
+<h2 id="2-安装">2.安装</h2><p><strong>1.Git的安装</strong></p>
+<p>Linux (Ubuntu, Debian)</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> install git-core</span><br></pre></td></tr></table></figure>
+<p>Linux (Fedora, Red Hat, CentOS)</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum <span class="keyword">install</span> git-core`</span><br></pre></td></tr></table></figure>
+<p><strong>2.Node.js的安装</strong></p>
+<p>安装 Node.js 的最佳方式是使用nvm</p>
+<ul>
+<li>nvm的安装</li>
+</ul>
+<p>curl</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http<span class="variable">s:</span>//raw.github.<span class="keyword">com</span>/creationix/nvm/master/install.<span class="keyword">sh</span> | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+<p>wget</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- http<span class="variable">s:</span>//raw.github.<span class="keyword">com</span>/creationix/nvm/master/install.<span class="keyword">sh</span> | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Node.js的安装</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm <span class="keyword">install</span> <span class="number">0.10</span></span><br></pre></td></tr></table></figure>
+<p><strong>3.Hexo的安装</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo-cli</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="3-基本使用">3.基本使用</h2><h3 id="3-1_初始化">3.1 初始化</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init <span class="tag">&lt;<span class="title">folder</span>&gt;</span></span><br><span class="line">cd <span class="tag">&lt;<span class="title">folder</span>&gt;</span></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h3 id="3-2_常用命令">3.2 常用命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>使用场景</th>
+<th>使用语法</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>init</td>
+<td>新建一个网站</td>
+<td>hexo init [folder]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>new</td>
+<td>新建一篇文章</td>
+<td>hexo new [layout] \<title\></title\></td>
+<td></td>
+</tr>
+<tr>
+<td>g[enerate]</td>
+<td>生成静态文件</td>
+<td>hexo g[enerate]</td>
+<td>-d,-w</td>
+</tr>
+<tr>
+<td>s[erver]</td>
+<td>启动服务器</td>
+<td>hexo s[erver]</td>
+<td>-p,-s,-l</td>
+</tr>
+<tr>
+<td>deploy</td>
+<td>部署网站</td>
+<td>hexo deploy</td>
+<td>-g</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>clean</td>
+<td>清除缓存和静态文件</td>
+<td>hexo clean</td>
+<td></td>
+</tr>
+<tr>
+<td>list</td>
+<td>列出网站资料</td>
+<td>hexo list \<type\></type\></td>
+<td></td>
+</tr>
+<tr>
+<td>version</td>
+<td>显示Hexo版本</td>
+<td>hexo version</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="external">更多命令</a></p>
+<h3 id="3-3_文件结构">3.3 文件结构</h3><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── source</span><br><span class="line"><span class="string">|   ├── _drafts</span></span><br><span class="line"><span class="string">|   └── _posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><em>_config.yml</em><br>网站的<strong>配置</strong>信息，可以在此配置大部分的参数</p>
+</li>
+<li><p><em>package.json</em><br>应用程序的信息，EJS, Stylus 和 Markdown renderer 已默认安装,可以自由移除</p>
+</li>
+<li><p><em>scaffolds</em><br><strong>模版</strong>文件夹，新建文章时，Hexo 会根据 <em>scaffold</em> 来建立文件。</p>
+</li>
+<li><p><em>scripts</em><br><strong>脚本</strong>文件夹。脚本是扩展 Hexo 最简易的方式，在此文件夹内的 JavaScript 文件会被自动执行。</p>
+</li>
+<li><p><em>source</em><br><strong>资源文件夹</strong>是存放用户资源的地方。除 <em>_posts</em> 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <em>public</em> 文件夹，而其他文件会被拷贝过去。</p>
+</li>
+<li><p><em>themes</em><br><strong>主题</strong>文件夹。Hexo 会根据主题来生成静态页面。</p>
+</li>
+</ul>
+<h3 id="3-4_基本配置">3.4 基本配置</h3><p>可以在 <em>_config.yml</em> 中修改大部份的配置</p>
+<ul>
+<li><strong>网站</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>网站标题</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td>网站副标题</td>
+</tr>
+<tr>
+<td>description</td>
+<td>网站描述</td>
+</tr>
+<tr>
+<td>author</td>
+<td>您的名字</td>
+</tr>
+<tr>
+<td>language</td>
+<td>网站使用的语言</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>网址</strong> </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>网址</td>
+</tr>
+<tr>
+<td>root</td>
+<td>网站根目录</td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>文章的永久链接格式</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">更多配置</a></p>
+<h3 id="3-5_主题使用">3.5 主题使用</h3><p>选择想要使用的<a href="https://hexo.io/themes/" target="_blank" rel="external">主题</a>，根据指导配置即可</p>
+<h3 id="3-6_插件使用">3.6 插件使用</h3><p>选择想要添加的<a href="https://hexo.io/plugins/" target="_blank" rel="external">插件</a>，根据指导安装即可</p>
+<h3 id="3-7_部署">3.7 部署</h3><p>Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> deploy</span><br></pre></td></tr></table></figure>
+<p>在开始之前，必须先在 <em>_config.yml</em> 中修改参数，一个正确的部署配置中至少要有 type 参数，例如</p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">deploy</span>:</span><br><span class="line">  <span class="typedef"><span class="keyword">type</span>: git</span></span><br></pre></td></tr></table></figure>
+<p>可以同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">- <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: </span><br><span class="line">- <span class="attribute">type</span>: heroku</span><br><span class="line">  <span class="attribute">repo</span>:</span><br></pre></td></tr></table></figure>
+<h4 id="3-7-1_Git的部署">3.7.1 Git的部署</h4><p>1.安装 hexo-deployer-git</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure>
+<p>2.修改配置</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="keyword">type</span>: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br><span class="line">  <span class="keyword">message</span>: [<span class="keyword">message</span>]</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repo</td>
+<td>库（Repository）地址</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>分支名称，如果使用的是 GitHub 或 GitCafe 的话，程序会尝试自动检测</td>
+</tr>
+<tr>
+<td>message</td>
+<td>自定提交信息</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">更多部署</a></p>
+<hr>
+<h2 id="4-注意点">4.注意点</h2><ul>
+<li><p>nvm 安装以后需要重启，相应命令才能生效</p>
+</li>
+<li><p>我自己使用虚拟机(ubuntu)安装使用 Hexo ，重启的时候输入 <code>hexo</code> 提示找不到命令，先执行以下命令，然后就可以再执行相应的  <code>hexo</code> 命令了</p>
+</li>
+</ul>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use [安装的<span class="keyword">Node</span>.<span class="identifier"></span><span class="title">js</span>版本号]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>hexo</code> 的相应命令要到 <code>hexo init</code> 指定的文件夹下执行</p>
+</li>
+<li><p>站点配置文件(_config.yml)中的 theme 属性值要和 <em>theme</em> 目录下的主题文件夹的名字一致(即从 github 下载主题后要对主题文件夹的名字进行相应修改)，不然执行 <code>hexo g</code> 的时候可能会报错</p>
+</li>
+<li><p>执行 <code>hexo s</code> 前需要确保防火墙正确设置，相应的端口可以被开启</p>
+</li>
+<li><p>可以直接把文章放在 <em>source/_posts</em> 下,而不用每次都运行 <code>hexo new</code> 命令生成</p>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>[toc]</p>
+<hr>
+<h2 id="1-简介">1.简介</h2><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a>是一个快速、简洁且高效的博客框架。Hexo 使用]]>
+    </summary>
+    
+      <category term="Hexo" scheme="wdcxc.github.io/tags/Hexo/"/>
+    
+      <category term="Tools" scheme="wdcxc.github.io/tags/Tools/"/>
+    
+      <category term="Tools" scheme="wdcxc.github.io/categories/Tools/"/>
+    
+  </entry>
+  
+</feed>

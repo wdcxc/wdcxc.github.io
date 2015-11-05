@@ -1,0 +1,1088 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
+
+
+    <meta name="description" content="好好学习，天天向上" />
+
+
+
+  <meta name="keywords" content="Docker," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="wdcxc's blog" type="application/atom+xml" />
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+<meta name="description" content="[toc]
+
+1.安装(基于ubuntu)1.安装wget
+12sudo apt-get updatesudo apt-get install wget
+2.安装Docker软件包
+
+从Docker官网下载
+
+1wget -qO- https://get.docker.com/ | sh
+
+从DaoCloud下载
+
+1curl -sSL https://get.daocloud.io/docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker使用总结">
+<meta property="og:url" content="wdcxc.github.io/2015/10/26/Docker使用总结/index.html">
+<meta property="og:site_name" content="wdcxc's blog">
+<meta property="og:description" content="[toc]
+
+1.安装(基于ubuntu)1.安装wget
+12sudo apt-get updatesudo apt-get install wget
+2.安装Docker软件包
+
+从Docker官网下载
+
+1wget -qO- https://get.docker.com/ | sh
+
+从DaoCloud下载
+
+1curl -sSL https://get.daocloud.io/docker">
+<meta property="og:updated_time" content="2015-11-05T01:56:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker使用总结">
+<meta name="twitter:description" content="[toc]
+
+1.安装(基于ubuntu)1.安装wget
+12sudo apt-get updatesudo apt-get install wget
+2.安装Docker软件包
+
+从Docker官网下载
+
+1wget -qO- https://get.docker.com/ | sh
+
+从DaoCloud下载
+
+1curl -sSL https://get.daocloud.io/docker">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+
+
+  <title> Docker使用总结 | wdcxc's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?4dd157292dbcb60a45e984c9f95f9405";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">wdcxc's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Docker使用总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-10-26T00:00:00+00:00" content="2015-10-26">
+              2015-10-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Docker/" itemprop="url" rel="index">
+                    <span itemprop="name">Docker</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/10/26/Docker使用总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/26/Docker使用总结/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>[toc]</p>
+<hr>
+<h2 id="1-安装(基于ubuntu)">1.<a href="http://docs.docker.com/linux/step_one/" target="_blank" rel="external">安装(基于ubuntu)</a></h2><p><strong>1.安装wget</strong></p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> install wget</span><br></pre></td></tr></table></figure>
+<p><strong>2.安装Docker软件包</strong></p>
+<ul>
+<li>从Docker官网下载</li>
+</ul>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- http<span class="variable">s:</span>//<span class="built_in">get</span>.docker.<span class="keyword">com</span>/ | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>从DaoCloud下载</li>
+</ul>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL http<span class="variable">s:</span>//<span class="built_in">get</span>.daocloud.io/docker | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="2-使用Docker_Hub_Mirror">2.使用Docker Hub Mirror</h2><p><strong>简介</strong></p>
+<blockquote>
+<p>Mirror 是 Docker Registry 的一种特殊类型，它起到了类似代理服务器的缓存角色，在用户和 Docker Hub 之间做镜像的缓存。这个功能的设计目的是为了企业客户访问 Docker Hub 时降低网络开销。</p>
+</blockquote>
+<p><strong>使用DaoCloud加速器2.0</strong></p>
+<ul>
+<li><p><a href="https://account.daocloud.io/signup?invite_code=pfkx67jvijuf16g9akki" target="_blank" rel="external">免费注册</a></p>
+</li>
+<li><p>安装加速器</p>
+</li>
+</ul>
+<p>运行安装命令（Docker ToolBox下可以使用 docker-machine ssh default 进入终端，boot2docker 可以使用 boot2docker ssh）</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL http<span class="variable">s:</span>//<span class="built_in">get</span>.daocloud.io/daomonit/install.<span class="keyword">sh</span> | <span class="keyword">sh</span> -<span class="keyword">s</span> <span class="number">89740</span>b95f9100e3fd8d7ca5c9634166d87dfdf20</span><br></pre></td></tr></table></figure>
+<ul>
+<li>卸载加速器</li>
+</ul>
+<p>可以通过运行 <code>dpkg -r daomonit</code> 卸载主机监控程序。( Centos 通过  <code>rpm -e daomonit</code> 卸载，Docker ToobBox 通过 <code>docker rm -f daomonit</code> 卸载)</p>
+<hr>
+<h2 id="3-常用命令">3.<a href="https://docs.docker.com/reference/commandline/cli/" target="_blank" rel="external">常用命令</a></h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>attach</strong> &lt; container &gt;</td>
+<td>与运行中的容器<strong>交互</strong></td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>build</strong> [ options ] &lt; new image name &gt; &lt; Dockerfile position &gt;</td>
+<td><strong>构建</strong>镜像</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>commit</strong> &lt; current job &gt; &lt; new image name &gt;</td>
+<td>将<strong>容器状态保存</strong>为镜像</td>
+</tr>
+<tr>
+<td>docker <strong>cp</strong> &lt; container:path &gt; &lt; hostpath &gt;</td>
+<td>从容器内<strong>复制文件</strong>到指定的路径</td>
+</tr>
+<tr>
+<td>docker create <br> [ options ] &lt; image &gt;</td>
+<td>在指定镜像上创建一个<strong>读写层</strong></td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>diff</strong> &lt; container &gt;</td>
+<td>查看容器内发生<strong>变化</strong>的文件和目录</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>export</strong> &lt; image &gt;</td>
+<td>用于将容器的系统文件<strong>打包</strong>成tar文件</td>
+</tr>
+<tr>
+<td>docker <strong>events</strong></td>
+<td>打印指定时间内的容器的<strong>实时系统事件</strong></td>
+</tr>
+<tr>
+<td><strong>H</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>help</strong> &lt; cmd &gt;</td>
+<td>查看和指定命令相关的<strong>帮助</strong></td>
+</tr>
+<tr>
+<td>docker <strong>history</strong> &lt; image name &gt;</td>
+<td>查看镜像的<strong>历史</strong></td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>images</strong></td>
+<td><strong>显示</strong>当前本地所有镜像</td>
+</tr>
+<tr>
+<td>docker <strong>import</strong> &lt; path &gt;</td>
+<td><strong>导入</strong>远程文件、本地文件和目录</td>
+</tr>
+<tr>
+<td>docker <strong>info</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>inspect</strong> &lt; container/image &gt;</td>
+<td>收集有关容器和镜像的<strong>底层信息</strong>，包括容器实例的IP地址，端口绑定列表，特定端口映射的搜索，收集配置的详细信息</td>
+</tr>
+<tr>
+<td><strong>K</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>kill</strong> [ options ] &lt; container &gt;</td>
+<td>发送SIGKILL信号来<strong>停止容器的主进程</strong></td>
+</tr>
+<tr>
+<td><strong>L</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>load</strong> &lt; *.tar &gt;</td>
+<td>从tar文件中<strong>载入镜像</strong>或仓库到STDIN</td>
+</tr>
+<tr>
+<td>docker <strong>login</strong> [ options ] &lt; server &gt;</td>
+<td><strong>登录</strong>到Docker registry服务器</td>
+</tr>
+<tr>
+<td>docker <strong>logs</strong> &lt; imgae name &gt;</td>
+<td>查看指定镜像的<strong>日志</strong></td>
+</tr>
+<tr>
+<td><strong>P</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>pull</strong> &lt; docker hub namespace/image name &gt;</td>
+<td><strong>拉取</strong>指定镜像</td>
+</tr>
+<tr>
+<td>docker <strong>ps</strong></td>
+<td>查看当前<strong>正在运行</strong>的容器</td>
+</tr>
+<tr>
+<td>docker <strong>push</strong> &lt; image name &gt;</td>
+<td><strong>推送</strong>指定镜像</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>restart</strong> &lt; container name or container id &gt;</td>
+<td><strong>重启</strong>指定容器</td>
+</tr>
+<tr>
+<td>docker <strong>rm</strong> &lt; container name or container id &gt;</td>
+<td><strong>删除</strong>指定容器</td>
+</tr>
+<tr>
+<td>docker <strong>rmi</strong> [ -f ] &lt; image name or image id &gt;</td>
+<td><strong>删除</strong>指定镜像</td>
+</tr>
+<tr>
+<td>docker <strong>run</strong> &lt; image name &gt;</td>
+<td><strong>运行</strong>指定镜像</td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>save</strong> &lt; image &gt;</td>
+<td><strong>保存镜像</strong>到tar文件中,并发送到STDOUT</td>
+</tr>
+<tr>
+<td>docker <strong>search</strong> &lt; image name or repository name &gt;</td>
+<td><strong>搜索</strong>镜像</td>
+</tr>
+<tr>
+<td>docker <strong>start</strong> &lt; container name or container id &gt;</td>
+<td><strong>启动</strong>指定容器</td>
+</tr>
+<tr>
+<td>docker <strong>stop</strong> &lt; container name or container id &gt;</td>
+<td><strong>停止</strong>指定容器</td>
+</tr>
+<tr>
+<td><strong>T</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>tag</strong> &lt; image id &gt; &lt; docker hub namespace/image name:version label or tag &gt;</td>
+<td>设置镜像<strong>标签</strong></td>
+</tr>
+<tr>
+<td><strong>W</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td>docker <strong>wait</strong> &lt; image &gt;</td>
+<td><strong>阻塞</strong>对指定容器的其它调用方法，直到容器停止后退出阻塞</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-Docker镜像构建">4.Docker镜像构建</h2><h3 id="4-1_Dockerfile语法">4.1 <a href="https://docs.docker.com/reference/builder/" target="_blank" rel="external">Dockerfile语法</a></h3><table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>使用场景</th>
+<th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ADD</strong> <br> &lt; src &gt; &lt; des &gt;</td>
+<td><strong>复制文件</strong>指令。它有两个参数<source>和<destination>。destination是容器内的路径。source可以是URL或者是启动配置上下文中的一个文件</destination></td>
+<td>官方推荐用 COPY ，源文件可以是 url 或 tar 包，当源文件为 tar 包时会自动 untar</td>
+</tr>
+<tr>
+<td><strong>COPY</strong> <br> &lt; src &gt; &lt; des &gt;</td>
+<td><strong>复制文件</strong>到容器中</td>
+<td>官方推荐</td>
+</tr>
+<tr>
+<td><strong>CMD</strong> <br> [ “exec”,”p1”,”p2” ]  <strong>CMD</strong> [ “p1”,”p2” ]  <strong>CMD</strong> cmd p1 p2</td>
+<td>容器运行时默认调用的<strong>启动命令</strong>，提供了容器默认的执行命令</td>
+<td>Dockerfile只允许使用一次CMD指令，使用多个CMD会抵消之前所有的指令，只有最后一个指令生效</td>
+</tr>
+<tr>
+<td><strong>EXPOSE</strong> <br> &lt; hostport:contport &gt;</td>
+<td>指定容器在运行时监听的<strong>端口</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>ENTRYPOINT</strong>  [“exec”,”p1”,”p2”]  <strong>ENTRYPOINT</strong> <br> cmd p1 p2</td>
+<td>配置给容器一个可执行的命令，这意味着在每次使用镜像创建容器时一个特定的应用程序可以被设置为<strong>默认程序</strong>。同时也意味着该镜像每次被调用时仅能运行指定的应用。</td>
+<td>类似于CMD，Docker只允许一个ENTRYPOINT，多个ENTRYPOINT会抵消之前所有的指令，只执行最后的ENTRYPOINT指令</td>
+</tr>
+<tr>
+<td><strong>ENV</strong> <br> &lt; key &gt; &lt; value &gt;</td>
+<td>设置<strong>环境变量</strong>。它们使用键值对，增加运行程序的灵活性</td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>FROM</strong> &lt; image &gt;</td>
+<td>指定最底层<strong>镜像</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>MAINTAINER</strong> <br> &lt; author name &gt;</td>
+<td>说明镜像<strong>作者</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>RUN</strong> &lt; cmd &gt;</td>
+<td>在shell或者exec的环境下执行的<strong>命令</strong></td>
+<td>RUN指令会在新创建的镜像上添加新的层面，接下来提交的结果用在Dockerfile的下一条指令中</td>
+</tr>
+<tr>
+<td><strong>USER</strong> &lt; uid &gt;</td>
+<td>指定容器运行时<strong>身份</strong>，镜像正在运行时设置一个 UID</td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>VOLUME</strong> &lt; path &gt;</td>
+<td>授权访问从容器内到主机上的目录，即为容器指定<strong>挂载数据卷</strong></td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>WORKDIR</strong> <br> &lt; dirpath &gt;</td>
+<td>指定 RUN、CMD 与 ENTRYPOINT 命令的<strong>工作目录</strong></td>
+<td>*</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-2_示例">4.2 示例</h3><ul>
+<li>wdcxc/hexo:base</li>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Hexo Docker Image </span></span><br><span class="line"><span class="comment">#image:wdcxc/hexo</span></span><br><span class="line"><span class="built_in">FROM</span> debian:stable</span><br><span class="line"><span class="built_in">MAINTAINER</span> wdcxc&lt;<span class="number">904342189</span>@qq.com&gt;</span><br><span class="line"><span class="comment">#install</span></span><br><span class="line"><span class="built_in">RUN</span> <span class="bash">apt-get update &amp;&amp; apt-get install -y curl</span><br><span class="line"></span><span class="built_in">RUN</span> <span class="bash">curl <span class="operator">-s</span>L https://deb.nodesource.com/setup | bash </span><br><span class="line"></span><span class="built_in">RUN</span> <span class="bash">apt-get update &amp;&amp; apt-get install -y nodejs &amp;&amp; npm install -g hexo</span><br><span class="line"></span><span class="comment">#configure</span></span><br><span class="line"><span class="built_in">RUN</span> <span class="bash">mkdir -p /usr/<span class="built_in">local</span>/hexo &amp;&amp; <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/hexo &amp;&amp; hexo init &amp;&amp; npm install</span><br><span class="line"></span><span class="comment">#run</span></span><br><span class="line"><span class="built_in">EXPOSE</span> <span class="number">4000</span>:<span class="number">4000</span></span><br><span class="line">WORKDIR /usr/local/hexo/</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="5-注意点">5.注意点</h2><ul>
+<li><p>Docker只支持64位平台 </p>
+</li>
+<li><p>程序运行完成之后，容器不会被销毁，但是状态为 Exited。此外对于以交互模式启动的容器可以先按下 Ctrl+P 然后按下 Ctrl+Q 这样的按键顺序脱离（detach）一个容器，脱离后的容器状态仍为 Up 并且程序会继续在后台运行，这时可以使用 attach 命令重新附到一个已经脱离的程序</p>
+</li>
+<li><p>如果要删除所有容器 docker rm $(docker ps -q -a)</p>
+</li>
+<li><p>要注意的一点：容器被删除后里面的数据会被删除，因此要注意挂载数据卷使数据持久化</p>
+</li>
+<li><p>不要在构建中升级版本<br>更新将发生在基础镜像里，你不需要在你的容器内来apt-get upgrade更新。因为在隔离情况下，如果更新时试图修改 init 或改变容器内的设备，更新可能会经常失败。它还可能会产生不一致的镜像，因为你不再有你的应用程序该如何运行以及包含在镜像中依赖的哪种版本的正确源文件。</p>
+</li>
+<li><p>构建镜像时文件名必须为Dockerfile，构建相关文件最好都放在同一目录下</p>
+</li>
+</ul>
+<hr>
+<h2 id="6-参考资料">6.参考资料</h2><ul>
+<li><p><a href="https://docs.docker.com/mac/started/" target="_blank" rel="external">Docker Get Started</a></p>
+</li>
+<li><p><a href="http://help.daocloud.io/index.html" target="_blank" rel="external">关于DaoCloud</a></p>
+</li>
+<li><p><a href="http://help.daocloud.io/tutorials/index.html" target="_blank" rel="external">Docker 新手入门 30 min</a></p>
+</li>
+<li><p><a href="http://www.docker.com/" target="_blank" rel="external">Docker官网</a></p>
+</li>
+<li><p><a href="https://docs.docker.com/" target="_blank" rel="external">Docker Docs</a></p>
+</li>
+<li><p><a href="https://docs.docker.com/extend/plugins_volume/" target="_blank" rel="external">Write a volume plugin</a></p>
+</li>
+<li><p><a href="https://docs.docker.com/reference/builder/" target="_blank" rel="external">Dockerfile reference</a></p>
+</li>
+</ul>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Docker/" rel="tag">#Docker</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/24/Hexo使用总结/" rel="next" title="Hexo使用总结">
+                <i class="fa fa-chevron-left"></i> Hexo使用总结
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/04/Sublime Text 使用总结/" rel="prev" title="Sublime Text 使用总结">
+                Sublime Text 使用总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/10/26/Docker使用总结/"
+     data-title="Docker使用总结"
+     data-content=""
+     data-url="wdcxc.github.io/2015/10/26/Docker使用总结/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/10/26/Docker使用总结/"
+                   data-title="Docker使用总结" data-url="wdcxc.github.io/2015/10/26/Docker使用总结/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="http://7xnsgd.com1.z0.glb.clouddn.com/wdcxcavatar.jpg" alt="wdcxc" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">wdcxc</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">好好学习，天天向上</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wdcxc" target="_blank">
+                  <i class="fa fa-github fa-fw"></i> GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装(基于ubuntu)"><span class="nav-number">1.</span> <span class="nav-text">1.安装(基于ubuntu)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-使用Docker_Hub_Mirror"><span class="nav-number">2.</span> <span class="nav-text">2.使用Docker Hub Mirror</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-常用命令"><span class="nav-number">3.</span> <span class="nav-text">3.常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Docker镜像构建"><span class="nav-number">4.</span> <span class="nav-text">4.Docker镜像构建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1_Dockerfile语法"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 Dockerfile语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2_示例"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-注意点"><span class="nav-number">5.</span> <span class="nav-text">5.注意点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-参考资料"><span class="nav-number">6.</span> <span class="nav-text">6.参考资料</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wdcxc</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wdcxcblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.2" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      isMobile() && FastClick.attach(document.body);
+
+      // Define Motion Sequence.
+      motionIntegrator
+        .add(motionMiddleWares.logo)
+        .add(motionMiddleWares.menu)
+        .add(motionMiddleWares.backToTop)
+        .add(motionMiddleWares.postList)
+        .add(motionMiddleWares.sidebar);
+
+      // Bootstrap Motion.
+      motionIntegrator.bootstrap();
+    });
+  </script>
+
+  
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
